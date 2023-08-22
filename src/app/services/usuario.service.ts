@@ -9,19 +9,29 @@ import { Usuario } from '../models/usuario.model';
 })
 export class UsuarioService {
 
-  _url: string = environment._URL;
+  private _url: string = environment._URL;
 
   constructor(private http: HttpClient) { }
 
-  getUsers() {
-    return this.http.get(`${this._url}/users`)
-    .pipe(
-      // return resp.data;
-      map( (resp: any) => resp['data'] )
-    );
+  getUsers(): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(`${this._url}/users?delay=2`)
+      .pipe(
+        // return resp.data;
+        map((resp: any) => resp['data'])
+      );
   }
 
-  getUser(id: string) {
-    return this.http.get(`${this._url}/users/${id}`);
+  getUsersPage(page: number): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(`${this._url}/users?page=${page}`)
+      .pipe(
+        map((resp: any) => resp['data'])
+      );
+  }
+
+  getUserById(id: string): Observable<Usuario> {
+    return this.http.get<Usuario>(`${this._url}/users/${id}?delay=2`)
+      .pipe(
+        map((resp: any) => resp['data'])
+      );
   }
 }
