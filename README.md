@@ -1,27 +1,15 @@
 # HttpEffects
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
+Proyecto generado con el CLI de Angular en su versión 16
+buscando generar y demostrar la construcción de "Actions, Reducers y Effects" dentro de una aplicación real de Angular
+código comentado y explicado.
+Basado en Curso de Fernando Herrera
 
-## Development server
+## Instalar la aplicación
+Clonar el repo en la ubicación deseada
+Realizar la reconstrucción de los paquetes de npm con el comando "npm install" o "npm i"
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Iniciar la aplicación
+En la consola ubicada en el directorio de la aplicación, correr el comando "ng serve"
+o "ng serve -o" para que se abra de forma automática en el navegador. Por defecto esta
+aplicación corre en el puerto 4200
